@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import styled from 'styled-components'
+
 type propsType={
     setHeaderSearch : (e:string)=>void;
 }
@@ -27,7 +28,11 @@ const HeaderWrap = styled.div`
     justify-content : space-between;
     align-items:center;
     background-color :#C4C4C4;
+    @media only screen and (max-width:){
+
+    }
 `
+
 const Search = styled.input`
     width:30%;
     padding : 0px 20px 0px 10px ;
