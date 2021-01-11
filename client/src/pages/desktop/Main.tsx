@@ -1,21 +1,16 @@
 import React, {useState} from "react";
 import Header from '../../components/desktop/Header';
-import InputArea from '../../components/desktop/InputArea';
+import WakeupTime from '../../components/desktop/WakeupTime';
+import TodayWork from '../../components/desktop/TodayWork'
 import styled from 'styled-components';
 
 export default function Main(){
-    const [todoInput, setTodoInput] = useState("");
-    const [headerSearch,setHeaderSearch] =useState("");
-    const [inputModalState, setInputModalState] = useState(false);
-
+    
     return(
         <Wrap>
-            <Header setHeaderSearch={setHeaderSearch} />
-            <InputArea inputModalState={inputModalState} />
-            {/* {<InputArea />} */}
-            <InputBtnArea>
-                <InputBtn>Start Todo</InputBtn>
-            </InputBtnArea>
+            <Header />
+            <WakeupTime/>
+            <TodayWork />
         </Wrap>
     )
 }
@@ -29,17 +24,3 @@ const Wrap = styled.div`
     align-items:center;
 
 `
-
-const InputBtnArea = styled.div`
-    width:80%;
-    height:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-`
-
-const InputBtn = styled.button`
-    width:100px;
-    height:30px;
-`
-
